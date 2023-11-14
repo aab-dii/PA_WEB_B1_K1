@@ -55,7 +55,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
             <a href="index.html">Home</a>
             <a href="produk.php">Katalog Produk</a>
             <a href="login.php">Login/Register</a>
-            <a href="homeartikel.html">Artikel</a>
+            <a href="homeartikel.php">Artikel</a>
         </div>
         <div class="navbar-extra">
             <form action="produk.php" method="get" class="search-form">
@@ -107,14 +107,14 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                             <?php echo $result['nama']; ?>
                         </h3>
                         <?php if (!empty($result['harga_diskon']) && $result['harga_diskon'] > 0) : ?>
-                        <p class="original-price">Rp
+                        <p class="original-price">Rp.
                             <?php echo $result['harga']; ?>
                         </p>
-                        <p class="discounted-price">Rp
+                        <p class="discounted-price">Rp.
                             <?php echo $result['harga_diskon']; ?>
                         </p>
                         <?php else : ?>
-                        <p class="price">Rp
+                        <p class="price">Rp.
                             <?php echo $result['harga']; ?>
                         </p>
                         <?php endif; ?>
@@ -134,7 +134,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                         <h3>
                             <?php echo $normal['nama']; ?>
                         </h3>
-                        <p class="price">Rp
+                        <p class="price">Rp.
                             <?php echo $normal['harga']; ?>
                         </p>
                         <div class="rating">⭐⭐⭐⭐</div>
@@ -154,14 +154,14 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                             <?php echo $product['nama']; ?>
                         </h3>
                         <?php if (!empty($product['harga_diskon']) && $product['harga_diskon'] > 0) : ?>
-                        <p class="original-price">Rp
+                        <p class="original-price">Rp.
                             <?php echo $product['harga']; ?>
                         </p>
-                        <p class="discounted-price">Rp
+                        <p class="discounted-price">Rp.
                             <?php echo $product['harga_diskon']; ?>
                         </p>
                         <?php else : ?>
-                        <p class="price">Rp
+                        <p class="price">Rp.
                             <?php echo $product['harga']; ?>
                         </p>
                         <?php endif; ?>
