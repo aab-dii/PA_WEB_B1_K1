@@ -8,15 +8,15 @@ if(!isset($_SESSION['login'])) {
     exit;
 }
 
-$result = mysqli_query($conn, "SELECT * FROM hp_form");
+$result = mysqli_query($conn, "SELECT * FROM artikel");
 
-$hp = [];
+$artikel = [];
 
 while ($row = mysqli_fetch_assoc($result)){
-    $hp [] = $row;
+    $artikel [] = $row;
 }
 
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +30,8 @@ while ($row = mysqli_fetch_assoc($result)){
 <nav class="sidebar">
         <ul>
             <li class="dashboard"><a href="#">Dashboard</a></li>
-            <li class="barang"><a href="#">Kelola Barang</a></li>
-            <li class="artikel"><a href="../artikel/dashboard.php">Kelola Artikel</a></li>
+            <li class="barang"><a href="../product/dashboard.php">Kelola Barang</a></li>
+            <li class="artikel"><a href="#">Kelola Artikel</a></li>
             <li class=""><a href="#">Layanan</a></li>
             <li class="Logout"><a href="#">Log Out</a></li>
         </ul>
@@ -45,32 +45,28 @@ while ($row = mysqli_fetch_assoc($result)){
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nama</th>
-                                <th>Merk</th>
-                                <th>Stok</th>
-                                <th>Harga</th>
-                                <th>Harga Diskon</th>
-                                <th>Deskripsi</th>
+                                <th>Judul</th>
+                                <th>Isi</th>
+                                <th>Tanggal</th>
+                                <th>Jenis</th>
+                                <th>Tentang</th>
                                 <th>Gambar</th>
-                                <th>Diskon</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; foreach($hp as $hp): ?>
+                            <?php $i = 1; foreach($artikel as $art): ?>
                                 <tr>
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $hp["nama"]; ?></td>
-                                    <td><?php echo $hp["merk"]; ?></td>
-                                    <td><?php echo $hp["stok"]; ?></td>
-                                    <td><?php echo $hp["harga"]; ?></td>
-                                    <td><?php echo $hp["harga_diskon"]; ?></td>
-                                    <td><?php echo substr($hp["deskripsi"], 0, 25) . "..."; ?></td>
-                                    <td><img src="../../assets/<?php echo $hp["gambar"] ?>" alt="" width="100px"height="100px"></td>
-                                    <td><?php echo $hp["diskon"]; ?></td>
+                                    <td><?php echo $art["judul"]; ?></td>
+                                    <td><?php echo substr($art["isi"], 0, 25) . "..."; ?></td>
+                                    <td><?php echo $art["tanggal"]; ?></td>
+                                    <td><?php echo $art["jenis"]; ?></td>
+                                    <td><?php echo $art["tentang"]; ?></td>
+                                    <td><img src="../../assets/artikel/<?php echo $art["gambar"] ?>" alt="" width="100px"height="100px"></td>
                                     <td class="action">
-                                    <button class="edit-btn"><a href="edit.php?id=<?php echo $hp['id']; ?>">Update</a></button>
-                                    <button class="delete-btn" onclick="confirmDelete(<?php echo $hp['id']; ?>)">Delete</button>
+                                    <button class="edit-btn"><a href="edit.php?id=<?php echo $art['id']; ?>">Update</a></button>
+                                    <button class="delete-btn" onclick="confirmDelete(<?php echo $art['id']; ?>)">Delete</button>
                                     </td>
                                 </tr>
                                 <?php $i++; endforeach; ?>

@@ -169,30 +169,32 @@ section {
 }
 
 .article-container {
+    margin: 0 50px 30px 30px;
+}
+
+.artikela{
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
 }
 
 .article {
-    display: flex;
     width: 600px; /* Lebar total artikel dan gambar */
-    margin: 20px;
+    margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: aqua; */
+    max-height: fit-content;
 }
 
 .article img {
-    width: 200px; /* Lebar gambar */
-    height: 200px;
+    width: 100px; /* Lebar gambar */
+    height: 100px;
     object-fit: cover;
     margin: 20px; 
     border-radius: 10px;
 }
 
-.article-content {
-    flex: 1; /* Menggunakan flex untuk mengisi sisa ruang yang ada */
+.article-content { /* Menggunakan flex untuk mengisi sisa ruang yang ada */
     padding: 20px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column; /* Menampilkan judul, tanggal, dan isi menurun */
 }
 

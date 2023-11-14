@@ -6,4 +6,8 @@ anggota :
 
 - muhammad abdillah
 - rifki nurhidayat
+<<<<<<< HEAD
   tommy
+=======
+- tommy candra gunawan
+>>>>>>> 80fad210c9059a493ec7ca6c80f2e9565db4283c
