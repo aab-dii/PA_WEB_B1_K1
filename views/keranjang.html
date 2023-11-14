@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="../CSS/keranjang.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
+        <div class="navbar-nav">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="../views/keranjang.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </div>
+    <!-- ... (kode HTML sebelumnya) ... -->
+<div class="table-container">
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Produk</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+                <th>Subtotal</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Isi tabel sesuai produk yang ada di keranjang -->
+            <tr>
+                <td>
+                    <div class="product-details">
+                        <div class="image-container">
+                            <img src="../img/aboutshop.img.jpg" alt="Produk 1">
+                        </div>
+                        <div class="details">
+                            <h3>Produk 1</h3>
+                        </div>
+                    </div>
+                </td>
+                <td>$100</td>
+                <td>1</td>
+                <td>$100</td>
+                <td><button class="delete-button">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="product-details">
+                        <div class="image-container">
+                            <img src="../img/BG.home.jpeg.jpg" alt="Produk 2">
+                        </div>
+                        <div class="details">
+                            <h3>Produk 2</h3>
+                        </div>
+                    </div>
+                </td>
+                <td>$150</td>
+                <td>1</td>
+                <td>$150</td>
+                <td><button class="delete-button">Hapus</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- ... (kode HTML setelahnya) ... -->
+        </div>
+        <div class="total-container">
+            <h2>Total Harga: <span id="total">250</span></h2>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+:root {
+    --primary: rgb(202, 0, 253);
+    --bg: rgb(0, 0, 0);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "poppins", sans-serif;
+    /* background-color: var(--bg); */
+    /* color: #fff; */
+  }
+  
+  /* css navbarnya */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgb(0, 0, 0, 0.936);
+    border-bottom: 1px solid rgba(160, 160, 160);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+  
+  #hamburger-menu {
+    display: none;
+  }
+  
+  .container {
+      display: flex;
+      justify-content: center;
+      margin: 100px auto;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+.wrap-detail{
+    display: flex;
+    min-height: fit-content;
+    margin-bottom: 20px;
+}
+
+.wrapp{
+    padding: 10px 5px 10px 40px;
+    width: 70%;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 50%;
+    margin: 20px;
+    position: sticky;
+    top: 50px;
+    max-height: 300px;
+}
+
+.img img{
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.detail-info {
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc; /* Tambahkan garis bawah */
+    padding-bottom: 10px;
+}
+
+.detail-info h2, p{
+    margin-bottom: 10px;
+}
+
+.deskripsi {
+    margin-top: 20px;
+}
+
+.deskripsi h2 {
+    margin-bottom: 10px;
+}
+
+.deskripsi p,
+.deskripsi p.collapsed {
+    max-width: 400px;   
+    padding: 10px;
+    min-height: fit-content;
+    text-align: left;
+    margin: 10px 0 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.deskripsi p.collapsed {
+    overflow: visible;
+    white-space: pre-wrap;
+}
+
+.deskripsi.collapsed-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.deskripsi.collapsed-button:hover {
+    color: darkblue;
+}
+
+
+.comments {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.comments h2 {
+    font-size: 24px;
+    min-width: 100vh;
+    margin-bottom: 15px;
+}
+
+.form-keranjang {
+    flex: 0 0 25%;
+    margin-left: 10px;
+    /* padding: 10px; */
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: sticky;
+    top: 15vh;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* CSS yang telah disertakan sebelumnya (tanpa perubahan) */
+
+/* .comment-list {
+    
+} */
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.user-comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Tambahkan garis bawah */
+    padding-bottom: 10px;
+}
+
+.comment-details h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.comment-details p {
+    margin: 0;
+}
+
+.user-comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}

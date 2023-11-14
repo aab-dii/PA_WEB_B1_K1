@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sidebar {
+    z-index: 1000;
+    width: 20px;
+    background-color: #333;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transition: width .75s ease;
+    top: 0;
+  }
+  
+  .sidebar:hover{
+    width: 250px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+  }
+  
+  .sidebar li {
+    /* padding: 10px; */
+    margin: 10px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+  }
+
+  li .artikel{
+    margin-bottom: 20px;
+  }
+
+
+section {
+    padding: 20px;
+}
+
+.container-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.add-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.wrap {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.main-content-lihat table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.action button {
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+.edit-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #D9534F;
+    color: white;
+}

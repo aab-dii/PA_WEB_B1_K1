@@ -1,0 +1,212 @@
+:root {
+    --primary: rgb(202, 0, 253);
+    --bg: rgb(0, 0, 0);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background-color: rgb(0, 0, 0, 0.936);
+    border-bottom: 1px solid rgba(160, 160, 160);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+  
+  #hamburger-menu {
+    display: none;
+  }
+
+
+
+
+
+/* Section */
+
+section {
+    margin: 8rem 7rem 5rem 7rem; 
+    border : 1px solid black;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    width: 90%; /* Menggunakan 80% lebar layar untuk konten */
+    margin-top: 20px; /* Memberikan jarak di atas konten */
+}
+
+.sidebar {
+    width: 200px;
+    max-height: 30rem;
+    background-color: #f1f1f1;
+    padding: 20px;
+    position: sticky;
+    top: 8rem;
+}
+
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebarr.right-sidebar {
+    border: 1px solid black;
+    width: 50rem;
+    background-color: #f1f1f1;
+    padding: 20px;
+    max-height: 100vh; /* Tinggi maksimal sidebar sesuai tinggi viewport */
+    overflow-y: auto;
+}
+
+.right-sidebar .article {
+    width: 100%; /* Sesuaikan lebar artikel dengan lebar sidebar */
+    margin: 20px 0; /* Memberikan jarak antara artikel pada sidebar kanan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar .article img {
+    width: 40%; /* Sesuaikan lebar gambar dengan lebar artikel */
+    height: 100px; /* Sesuaikan tinggi gambar */
+    object-fit: cover;
+}
+
+.right-sidebar .article-content {
+    padding: 10px;
+}
+.right-sidebar .article h2 {
+    font-size: 1em; /* Sesuaikan ukuran font judul artikel */
+    margin: 5px 0; /* Sesuaikan margin judul artikel */
+}
+
+.right-sidebar .article p.date {
+    color: #888;
+    font-size: 0.7em; /* Sesuaikan ukuran font tanggal artikel */
+    margin-bottom: 5px; /* Sesuaikan margin tanggal artikel */
+}
+
+.right-sidebar .article p {
+    font-size: 0.9em; /* Sesuaikan ukuran font isi artikel */
+    margin: 5px 0; /* Sesuaikan margin isi artikel */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.article {
+    display: flex;
+    width: 600px; /* Lebar total artikel dan gambar */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article img {
+    width: 200px; /* Lebar gambar */
+    height: 200px;
+    object-fit: cover;
+    margin: 20px; 
+    border-radius: 10px;
+}
+
+.article-content {
+    flex: 1; /* Menggunakan flex untuk mengisi sisa ruang yang ada */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Menampilkan judul, tanggal, dan isi menurun */
+}
+
+.article h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.article p.date {
+    color: #888;
+    font-size: 0.8em;
+    margin-bottom: 10px; /* Memberikan jarak antara tanggal dan isi artikel */
+}
+
+.article p {
+    margin: 10px 0;
+}

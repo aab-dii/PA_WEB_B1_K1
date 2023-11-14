@@ -1,0 +1,149 @@
+/* ADMIN DASHBOARD */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body{
+  /* background-color: aqua; */
+  margin: 20px 10px 0 0;
+  padding: 0;
+}
+/* body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+} */
+
+
+/* Sidebar */
+/* Style untuk sidebar */
+
+.sidebar {
+  z-index: 1000;
+  width: 20px;
+  background-color: #333;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  transition: width .75s ease;
+  top: 0;
+}
+
+.sidebar:hover{
+  width: 250px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Style untuk konten utama */
+.content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+
+/* body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(
+      315deg,
+      rgb(0, 0, 0) 3%,
+      rgb(51, 0, 254)38%,
+      rgb(0, 0, 0) 68%,
+      rgb(28, 0, 185) 98%
+    );
+    animation: gradient 30s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  } */
+  .tambah{
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 50px 0px 0;
+  }
+
+  .add-button a {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+table {
+    margin: 20px 50px 50px 50px;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #444;
+    color: #fff;
+}
+.edit-btn, .delete-btn {
+  background-color: #FFC107; /* Warna kuning untuk Update */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px; /* Ruang antara tombol */
+}
+
+.delete-btn {
+  background-color: #FF5733; /* Warna merah untuk Delete */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+  
