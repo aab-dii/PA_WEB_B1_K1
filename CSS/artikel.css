@@ -81,13 +81,13 @@ body {
     display: none;
   }
 
-
-
 section {
     margin: 8rem 7rem 5rem 7rem; 
-    border : 1px solid black;
+    /* border : 1px solid black; */
     display: flex;
     flex-direction: column; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.164);
 }
 
 header{

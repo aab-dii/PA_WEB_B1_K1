@@ -1,3 +1,25 @@
+<?php
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    echo "ID barang tidak ditemukan.";
+    exit; 
+}
+
+include '../koneksi/config.php'; 
+
+$sql = "SELECT * FROM artikel WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    $artikel = mysqli_fetch_assoc($result);
+} else {
+    // Tindakan jika barang dengan ID tertentu tidak ditemukan
+    echo "Barang dengan ID $id tidak ditemukan.";
+    exit; 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,21 +35,20 @@
 
         <div class="navbar-nav">
             <a href="index.html">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#menu">Menu</a>
+            <a href="produk.php">Katalog Produk</a>
             <a href="#contact">Kontak</a>
+            <a href="login.php">Login/Register</a>
         </div>
     </nav>
 
     <section>
         <header>
-            <p class="date">Tanggal Artikel</p>
-            <h1>Judul Artikel</h1>
+            <p class="date"><?php echo $artikel['tanggal'];?></p>
+            <h1><?php echo $artikel['judul'];?></h1>
         </header>
         <article>
-            <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel">
-            <p>Isi artikel dimulai di sini. Sesuaikan dengan konten artikel yang sebenarnya. Isi artikel dimulai di sini. Sesuaikan dengan konten artikel yang sebenarnya. Isi artikel dimulai di sini. Sesuaikan dengan konten artikel yang sebenarnya.</p>
-            <p>Isi artikel dilanjutkan di sini. Sesuaikan dengan konten artikel yang sebenarnya. Isi artikel dilanjutkan di sini. Sesuaikan dengan konten artikel yang sebenarnya. Isi artikel dilanjutkan di sini. Sesuaikan dengan konten artikel yang sebenarnya.</p>
+        <img src="../assets/artikel/<?php echo $artikel['gambar']; ?>" alt="Gambar Artikel">
+            <p><?php echo $artikel['isi']; ?></p>
         </article>
     </section>
 

@@ -76,8 +76,6 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
             <!-- Tambahkan gambar lainnya di sini -->
         </div>
     </div>
-    
-     
 
     <div class="container">
         <aside class="sidebar">

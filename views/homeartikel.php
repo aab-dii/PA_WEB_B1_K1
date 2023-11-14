@@ -52,20 +52,21 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
     </nav>
     
     <section>
-        <h1>Berita Tentang Kami</h1>
-
+        
         <div class="content">
             <div class="sidebar">
-                <h3>Kategori</h3>
-                <ul>
-                    <li><a href="#">Kategori 1</a></li>
-                    <li><a href="#">Kategori 2</a></li>
-                    <li><a href="#">Kategori 3</a></li>
-                    <!-- Tambahkan kategori lainnya sesuai kebutuhan -->
-                </ul>
+                <h3>Filter By Merk</h3>
+                <form action="homeartikel.php" method="get">
+                <label> <input type="checkbox" class="filter-checkbox" name="merk[]" value="Xiaomi"> Xiaomi </label>
+                <label> <input type="checkbox" class="filter-checkbox" name="merk[]" value="Vivo"> Vivo </label>
+                <label> <input type="checkbox" class="filter-checkbox" name="merk[]" value="Realme"> Realme </label>
+                <label> <input type="checkbox" class="filter-checkbox" name="merk[]" value="Samsung"> Samsung </label>
+                <input class="filter" type="submit" name="filter" value="Filter">
+            </form>
             </div>
-
+            
             <div class="article-container">
+                <h1>Berita Tentang Kami</h1>
             <?php foreach ($art as $result) : ?>
                 <div class="article">
                     <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
@@ -87,179 +88,17 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                         </div>
                     </a>
                 </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article">
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
-                        <div class="article-content">
-                            <h2><?php echo $result['judul']; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
-                        </div>
-                    </a>
-                </div>
                 <?php endforeach; ?>
-                <!-- <a href="">
-                    <div class="article">
-                        <img src="../../assets/artikel/" alt="Gambar Artikel 2">
-                        <div class="article-content">
-                            <h2>Judul Artikel 2</h2>
-                            <p class="date">Tanggal Artikel 2</p>
-                            <p>Isi singkat artikel 2...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 2">
-                        <div class="article-content">
-                            <h2>Judul Artikel 2</h2>
-                            <p class="date">Tanggal Artikel 2</p>
-                            <p>Isi singkat artikel 2...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 2">
-                        <div class="article-content">
-                            <h2>Judul Artikel 2</h2>
-                            <p class="date">Tanggal Artikel 2</p>
-                            <p>Isi singkat artikel 2...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 2">
-                        <div class="article-content">
-                            <h2>Judul Artikel 2</h2>
-                            <p class="date">Tanggal Artikel 2</p>
-                            <p>Isi singkat artikel 2...</p>
-                        </div>
-                    </div>
-                </a> -->
-                <!-- Tambahkan artikel lainnya sesuai kebutuhan -->
             </div>
             <div class="sidebarr right-sidebar">
                 <h3>Berita Seputar Handphone</h3>
-                <a href="">
+                <a href="artikel.php?id=<?php echo $result['id']; ?> " class="right-article">
                     <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 3">
+                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
                         <div class="article-content">
-                            <h2>Judul Artikel 3</h2>
-                            <p class="date">Tanggal Artikel 3</p>
-                            <p>Isi singkat artikel 3...</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 4">
-                        <div class="article-content">
-                            <h2>Judul Artikel 4</h2>
-                            <p class="date">Tanggal Artikel 4</p>
-                            <p>Isi singkat artikel 4...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 4">
-                        <div class="article-content">
-                            <h2>Judul Artikel 4</h2>
-                            <p class="date">Tanggal Artikel 4</p>
-                            <p>Isi singkat artikel 4...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 4">
-                        <div class="article-content">
-                            <h2>Judul Artikel 4</h2>
-                            <p class="date">Tanggal Artikel 4</p>
-                            <p>Isi singkat artikel 4...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 4">
-                        <div class="article-content">
-                            <h2>Judul Artikel 4</h2>
-                            <p class="date">Tanggal Artikel 4</p>
-                            <p>Isi singkat artikel 4...</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="article">
-                        <img src="../img/BG.home.jpeg.jpg" alt="Gambar Artikel 4">
-                        <div class="article-content">
-                            <h2>Judul Artikel 4</h2>
-                            <p class="date">Tanggal Artikel 4</p>
-                            <p>Isi singkat artikel 4...</p>
+                            <h2><?php echo $result['judul']; ?></h2>
+                            <p class="date"><?php echo $result['tanggal']; ?></p>
+                            <p><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
                         </div>
                     </div>
                 </a>
@@ -267,5 +106,8 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
             </div>
         </div>
     </section>
+    <footer>
+        <p>tes</p>
+    </footer>
 </body>
 </html>
