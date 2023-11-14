@@ -48,7 +48,7 @@ body {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0 1rem;
 }
 
@@ -95,7 +95,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../img/background_header.jpeg.jpg');
+  background-image: url('../img/shiwa-id-bFXjg2wSVDo-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -298,7 +298,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;  
+  position: static;
+  bottom: 0px;  
   width: 100%;
 }
