@@ -23,9 +23,9 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  padding: 1.2rem 7%;
-  background-color: rgba(0, 0, 0, 0.936);
+  align-items: center;
+  padding: 0.2rem 7%;
+  background-color: rgba(0, 0, 0, 0.700);
   border-bottom: 1px solid rgba(160, 160, 160);
   position: fixed;
   top: 0;
@@ -59,15 +59,16 @@ body {
   width: 130px;
   height: 50px;
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   outline: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1.1em;
-  color: #fff;
+  font-size: 1em;
+  color: #ffffff;
   font-weight: 500;
-  margin-left: 40px;
+  left: 0;
 }
+
 /* login regis end */
 
 .navbar .navbar-nav a:hover {
@@ -141,7 +142,7 @@ body {
   font-size: 1.5rem;
   margin-top: 1rem;
   line-height: 1.4;
-  font-weight: 80;
+  /* font-weight: 80; */
   text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
   /* mix-blend-mode: difference; untuk tulisan yg tertimpa bacground/sama warnnanya dgn background */
 }
@@ -162,12 +163,13 @@ body {
   padding: 20px;
 }
 
+
 .person {
   text-align: center;
-  background-color: #fff;
+  background-color: #9c9c9c;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(158, 158, 158, 0.1);
   margin: 20px;
 }
 
@@ -177,8 +179,17 @@ body {
   height: 150px;
   object-fit: cover;
 }
+.person h3 {
+  color: #000000;
+}
+.person h4 {
+  color: #000000;
+}
 
-/* About us */
+.person p {
+  color: #000000;
+}
+/* About shop */
 .about {
   padding: 10rem 7% 1.4rem;
 }
@@ -196,7 +207,20 @@ body {
 .about .row {
   display: flex;
 }
+/* about us*/
+.aboutus {
+  padding: 10rem 7% 1.4rem;
+}
 
+.aboutus h5 {
+  text-align:left 2px;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.aboutus h5 span {
+  color: var(--primary);
+}
+/* us */
 .about .row .about-img {
   flex: 1 1 45rem;
 }
@@ -218,7 +242,7 @@ body {
 .about .row .content p {
   margin-bottom: 0.8rem;
   font-size: 1.3rem;
-  font-weight: 100;
+  /* font-weight: 100; */
   line-height: 1.6;
 }
 
@@ -243,7 +267,7 @@ body {
       position: absolute;
       top: 100%;
       right: -100%;
-      background-color: #fff; /* warna dri hamburger menu nya*/
+      background-color: #000000; /* warna dri hamburger menu nya*/
       width: 30rem;
       height: 100vh;
       transition: 0.3s;
@@ -254,7 +278,7 @@ body {
     }
 
 .navbar .navbar-nav a{
-    color: var(--bg);
+    color: white;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
@@ -298,9 +322,6 @@ body {
         display: inline-block;
     }
 }
-/* ADMIN DASHBOARD */
-
-
 /* footer */
 footer {
   background-color: #333;
@@ -308,6 +329,9 @@ footer {
   text-align: center;
   padding: 10px;
   position: static;
-  bottom: 0px;  
+  /* bottom: 0px;   */
   width: 100%;
 }
+/* ADMIN DASHBOARD */
+
+

@@ -1,3 +1,36 @@
+<?php
+include '../koneksi/config.php';
+
+if (isset($_GET['search'])) {
+    $cari = mysqli_real_escape_string($conn, $_GET['search']);
+
+    $query = "SELECT * FROM artikel WHERE judul LIKE '%$cari%'";
+    $tampil = mysqli_query($conn, $query);
+} else if (isset($_GET['filter'])) {
+    // Pengecekan apakah parameter merk di-set
+    if (isset($_GET['merk'])) {
+        // Mendapatkan nilai merk yang dipilih
+        $selectedMerk = $_GET['merk'];
+
+        // Membuat klausa WHERE berdasarkan nilai merk yang dipilih
+        $whereClause = " WHERE merk IN ('" . implode("', '", $selectedMerk) . "')";
+        
+        // Menyusun query dengan klausa WHERE
+        $query = "SELECT * FROM artikel" . $whereClause;
+        
+        // Menjalankan query
+        $tampil = mysqli_query($conn, $query);
+    } else {
+        $tampil = mysqli_query($conn, "SELECT * FROM artikel");
+    }
+}
+else {
+    $tampil = mysqli_query($conn, "SELECT * FROM artikel");
+}
+
+$art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -30,16 +63,19 @@
 
     <div class="navbar-nav">
         <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="login.php">Katalog</a>
+        <a href="#about">About Us</a>
+        <a href="produk.php">Katalog</a>
         <a href="homeartikel.php">Artikel</a>
         <a href="#contact">Kontak</a>
-        <a href="login.php" id="login">
-          <button class="btnlogin">Login / Register</button>
-        </a>
+    </div>
+    <div class="navbar-login">
+      <a href="login.php" id="login">Login</a>
+      <a href="register.php" id="register">Register</a>
     </div>
 
     <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="../views/keranjang.html" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
     </nav>
 
@@ -50,15 +86,15 @@
       <main class="content">
         <h1>Toko <span>Handphone</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, nulla nemo dolor ipsa et quasi ut, illo assumenda tempore, paduka kakang abdi hastala vista</p>
-        <a href="login.php" class="cta">Beli Sekarang</a>
+        <a href="produk.php" class="cta">Beli Sekarang</a>
       </main>
     </section>
     <!-- hero section end -->
 
      <!-- about section start -->
     <section id="about" class="about">
-      <h2><span>About</span> Shop</h2>
-      
+      <h2><span>About</span> Us</h2>
+
       <div class="row">
         <div class="about-img">
           <img src="../img/aboutshop.img.jpg" 
@@ -68,39 +104,35 @@
           <h3>About Shop</h3>
           <p>Selamat datang di "Gadget Express", destinasi utama Anda untuk memenuhi kebutuhan teknologi terkini! Kami bangga menyajikan rangkaian lengkap perangkat mobile terbaik dari merek terkemuka di industri. Dengan kombinasi inovasi terbaru dan layanan pelanggan yang unggul.</p>
         </div>
-      </section>
-      
-    <section id="aboutus" class="aboutus">
-      <h5><span>About</span> Us</h5>
-    </div>
-    <div class="container">
-      <div class="person">
+      </div>
+      <div class="container">
+        <div class="person">
         <img src="../img/BG.home.jpeg.jpg" alt="Person 1">
         <h3>Muhammad Abdillah</h3>
-        <h4>Hosting</h4>
+        <h4>back end</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
-      </div>
-      
-      <div class="person">
+    </div>
+
+    <div class="person">
         <img src="../img/BG.home.jpeg.jpg" alt="Person 2">
         <h3>Tommy Candra Gunawan</h3>
-        <h4>Front End</h4>
+        <h4>front end</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
-      </div>
-      
-      <div class="person">
-        <img src="../img/BG.home.jpeg.jpg" alt="Person 3">
-        <h3>Rifki Nurhidayat</h3>
-        <h4>Back End</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
-      </div>
     </div>
+    
+    <div class="person">
+        <img src="../img/BG.home.jpeg.jpg" alt="Person 3">
+        <h3>Rifky Nurhidayat</h3>
+        <h4>Hosting</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
+    </div>
+</div>
 </section>
-  <!-- about section end -->
-     
+     <!-- about section end -->
      <footer>
        <p>&copy; 2023 About Us. All rights reserved.</p>
      </footer>
+
     <!-- feather icon -->
     <script>
         feather.replace();
