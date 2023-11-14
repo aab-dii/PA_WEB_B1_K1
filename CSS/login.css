@@ -5,6 +5,8 @@
   * {
     outline: none;
     text-decoration: none;
+    margin: none;
+    padding: none;
   }
 
   body {
