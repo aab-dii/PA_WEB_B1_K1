@@ -4,14 +4,9 @@
   
   * {
     outline: none;
-    text-decoration: none;
-<<<<<<< HEAD
-    margin: none;
-    padding: none;
-=======
     margin: 0;
     padding: 0;
->>>>>>> 80fad210c9059a493ec7ca6c80f2e9565db4283c
+    text-decoration: none;
   }
 
   body {
