@@ -1,7 +1,7 @@
 <?php
     include '../koneksi/config.php';
 
-    
+
     $id = [18, 9, 19, 20, 21];
     $id_string = implode(',', $id); // Menggabungkan nilai array menjadi string terpisah koma
 
@@ -99,7 +99,7 @@
             <h2>Pilihan Terbaik <span> Kami</span></h2>
             <div class="product-content">
                 <?php foreach ($hp as $normal) : ?>
-                <a href="detailproduk.php?id=<?php echo $normal['id']; ?>" class="product-card">
+                <a href="produk.php" class="product-card">
                     <img src="../assets/<?php echo $normal['gambar']; ?>" alt="Product 1">
                     <h3>
                         <?php echo $normal['nama']; ?>
