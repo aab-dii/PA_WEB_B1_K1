@@ -57,3 +57,30 @@ document.addEventListener('DOMContentLoaded', function () {
   // Atur interval untuk mengubah gambar setiap 5 detik (5000 milidetik)
   setInterval(changeImage, 5000);
 });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var sections = document.querySelectorAll('section');
+    var navLinks = document.querySelectorAll('.navbar-nav a');
+
+    window.addEventListener('scroll', function() {
+      var currentSection = "";
+
+      sections.forEach(function(section) {
+        var sectionTop = section.offsetTop - 50;
+        var sectionBottom = sectionTop + section.clientHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentSection = section.id;
+        }
+      });
+
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+

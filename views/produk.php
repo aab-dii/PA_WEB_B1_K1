@@ -51,17 +51,16 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
     <nav class="navbar">
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
-        <div class="navbar-nav">
-            <a href="index.html">Home</a>
-            <a href="produk.php">Katalog Produk</a>
-            <a href="login.php">Login/Register</a>
-            <a href="homeartikel.php">Artikel</a>
-        </div>
         <div class="navbar-extra">
             <form action="produk.php" method="get" class="search-form">
                 <input type="text" name="search" placeholder="Cari...">
                 <button type="submit">Cari</button>
             </form>
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="produk.php">Katalog Produk</a>
+            <a href="homeartikel.php">Artikel</a>
+        </div>
             <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
