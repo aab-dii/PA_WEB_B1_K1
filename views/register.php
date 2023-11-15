@@ -13,7 +13,7 @@ if (isset($_POST["Register"])) {
     $gambar = date("Y-m-d"). $foto;
     $temp = $_FILES['gambar']['tmp_name'];  
 
-    $cek = mysqli_query($conn, "SELECT username FROM pengguna WHERE username = '$username'");
+    $cek = mysqli_query($conn, "SELECT username FROM pengguna WHERE username ='$username'");
 
     if (mysqli_fetch_assoc($cek)) {
         echo "

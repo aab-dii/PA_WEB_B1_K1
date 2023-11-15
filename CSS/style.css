@@ -335,3 +335,24 @@ footer {
 /* ADMIN DASHBOARD */
 
 
+/* Gaya tautan navbar */
+.navbar-nav a {
+    color: #df1a1a;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s; /* Efek transisi warna saat hover */
+}
+
+/* Gaya tautan navbar yang aktif */
+.navbar-nav a.active {
+    color: #ffffff;
+    background-color: #b2b2b2;
+    /* tambahkan properti lain sesuai kebutuhan Anda */
+}
+
+/* Gaya tautan navbar pada tampilan kecil */
+@media screen and (max-width: 600px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
