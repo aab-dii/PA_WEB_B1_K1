@@ -1,14 +1,14 @@
 {
-    "window.zoomLevel": 1,
-    "editor.fontSize": 18,
-    "workbench.colorTheme": "Noctis Minimus",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.wordWrap": "on",
-    "files.associations": {
-        "iostream": "cpp",
-        "array": "cpp",
-        "string": "cpp",
-        "ostream": "cpp",
-        "fstream": "cpp"
-    }
+  "window.zoomLevel": 0,
+  "editor.fontSize": 18,
+  "workbench.colorTheme": "Noctis Minimus",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.wordWrap": "on",
+  "files.associations": {
+    "iostream": "cpp",
+    "array": "cpp",
+    "string": "cpp",
+    "ostream": "cpp",
+    "fstream": "cpp"
+  }
 }

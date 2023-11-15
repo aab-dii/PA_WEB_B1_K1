@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require "../connect/koneksi.php";
+    require "../koneksi/config.php";
 
     $result = mysqli_query($conn, "select * from pengguna");
 

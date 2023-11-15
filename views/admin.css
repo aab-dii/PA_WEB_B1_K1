@@ -3,6 +3,11 @@ table {
     margin-top: 5em;
 }
 
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
 form {
     background-image: url('../img/background1.jpg');
     min-height: 100vh;
