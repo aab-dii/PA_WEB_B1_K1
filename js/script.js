@@ -84,3 +84,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  const revealElements = document.querySelectorAll(".reveal");
+
+  function checkScroll() {
+      for (let element of revealElements) {
+          const elementTop = element.getBoundingClientRect().top;
+          if (elementTop < window.innerHeight - 100 && elementTop > -element.clientHeight) {
+              element.classList.add("revealed");
+          } else {
+              element.classList.remove("revealed");
+          }
+      }
+  }
+  
+  function animate() {
+      checkScroll();
+      requestAnimationFrame(animate);
+  }
+  
+  animate();
