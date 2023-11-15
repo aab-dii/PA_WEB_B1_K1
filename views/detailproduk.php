@@ -1,12 +1,27 @@
 <?php
+include '../koneksi/config.php'; 
+
+session_start(); 
+
+if(!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
 if (isset($_GET['id'])) {
-    $id_barang = $_GET['id'];
+    $_SESSION['id_barang'] = $_GET['id'];
 } else {
     echo "ID barang tidak ditemukan.";
     exit; 
 }
 
-include '../koneksi/config.php'; 
+$id_barang = $_SESSION['id_barang'];
+$_SESSION['id_pengguna'] = $_SESSION['id'];
+
+if (isset($_POST['jumlah'])){
+    $_POST['quantity'] = $_SESSION['qty'];
+    header("Location: transaksi.php");
+}
 
 $sql = "SELECT * FROM hp_form WHERE id = $id_barang";
 $result = mysqli_query($conn, $sql);
@@ -34,8 +49,8 @@ if (mysqli_num_rows($result) > 0) {
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
     <div class="navbar-nav">
-        <a href="produk.php">Home</a>
-        <a href="#about">About Us</a>
+    <a href="index.html">Home </a>
+            <a href="produk.php">Katalog Produk </a>
         <a href="#menu">Menu</a>
         <a href="#contact">Kontak</a>
     </div>
@@ -58,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
                         <div class="detail-info">
                             <h2><?php echo $barang['nama']; ?></h2>
                             <p>Stok : <?php echo $barang['stok']; ?></p>
-                            <h2>Harga: Rp <?php echo $barang['harga']; ?></h2>
+                            <h2>Harga: Rp <?php echo number_format($barang['harga']); ?></h2>
                         </div>
                         <div class="deskripsi">
                             <h2>Deskripsi Produk</h2>
@@ -114,10 +129,10 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
             <div class="form-keranjang">
-                <form action="tambah_ke_keranjang.php" method="post">
+                <form action="" method="post">
                     <label for="quantity">Jumlah:</label>
                     <input type="number" id="quantity" name="quantity" min="1" required>
-                    <button type="submit">Tambah ke Keranjang</button>
+                    <button type="submit" name="jumlah">Tambah ke Keranjang</button>
                 </form>
             </div>
         </div>

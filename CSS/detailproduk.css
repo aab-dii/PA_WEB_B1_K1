@@ -112,9 +112,14 @@
 }
 
 .img img{
-    width: 100%;
+    max-width: 200px;
     margin: 20px auto;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img img:hover{
+    transform: scale(1.2);
 }
 
 .detail-info {
@@ -184,10 +189,14 @@
 form {
     max-width: 300px;
     margin: 0 auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     position: sticky;
     top: 15vh;
     padding: 10px;
+    border-radius: 12px;
+background: #ebebeb;
+box-shadow:  15px 15px 30px #b0b0b0,
+             -15px -15px 30px #ffffff;
 }
 
 label {
@@ -214,12 +223,18 @@ button {
 
 /* CSS yang telah disertakan sebelumnya (tanpa perubahan) */
 
-/* .comment-list {
-    
-} */
+.comments{
+    border-top: 1px solid black ;
+}
 
-.comment-form {
+form .comment-form {
+    border-top: 1px solid black ;
     margin-top: 20px;
+    width: 100%;
+}
+
+form input{
+    width: 100%;
 }
 
 .user-comment {

@@ -1,6 +1,16 @@
 <?php
 include '../koneksi/config.php';
 
+session_start();
+
+if(!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$user = $_SESSION['username'];
+
+
 if (isset($_GET['search'])) {
     $cari = mysqli_real_escape_string($conn, $_GET['search']);
 
@@ -52,16 +62,17 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
         <div class="navbar-nav">
-            <a href="index.html">Home</a>
-            <a href="produk.php">Katalog Produk</a>
-            <a href="login.php">Login/Register</a>
-            <a href="homeartikel.php">Artikel</a>
-        </div>
-        <div class="navbar-extra">
             <form action="produk.php" method="get" class="search-form">
                 <input type="text" name="search" placeholder="Cari...">
                 <button type="submit">Cari</button>
             </form>
+            <a href="index.html">Home</a>
+            <a href="produk.php">Katalog Produk</a>
+            <a href="login.php">Login/Register</a>
+            <a href="homeartikel.php">Artikel</a>
+            <a href="homeartikel.php">LogOut</a>
+        </div>
+        <div class="navbar-extra">
             <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
