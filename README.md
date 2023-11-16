@@ -31,16 +31,16 @@ setelah anda login anda bisa melihat arikel apa saja seperti berita terbaru meng
 ![WhatsApp Image 2023-11-16 at 22 09 25_830d6671](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/d7b5bab9-7ca3-4dcb-a783-872892e21ce1)
 
 ### 5. Melihat produk
-Setelah login anda bisa melihat produk apa saja yang tersedia
-![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/e89ed1b2-9665-41f7-b5f3-f29a9c7caf6b)
+Setelah login anda bisa melihat produk apa saja yang tersedia, anda juga dapat mencari dan mensroting produk
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/da508f7a-047b-455a-9183-207988715a25)
 
 ### 6. Melihat Detail produk
 anda bisa memilih poduk yang diinginkan
-![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/11800540-8863-4bd7-96e6-6f47908c4c91)
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/812c57ba-5309-4e0c-8129-8e40625bb0a3)
 
 ### 7. Membeli Produk
 anda bisa membeli produk dan melakukan transaksi
-![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/72127bba-d004-4b81-b7bb-4f02943096b7)
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/115792343/b45e8b93-be65-4119-b5a6-42c305ecd920)
 
 ## Admin
 
