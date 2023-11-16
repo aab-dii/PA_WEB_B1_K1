@@ -26,72 +26,42 @@ setelah registrasi anda bisa melakukan login , anda bisa login sebagai admin ata
 Untuk melakukan Logout silahkan pencet logo profil pada halaman manapun (setelah anda login akan muncul logo profil)
 ![Screenshot 2023-11-16 215022](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/bf68bc2c-1c0d-4bde-8755-d89814ac531c)
 
-### 4. Mengirim Pesan Ke Admin
-
-Untuk mengirim pesan ke admin silahkan scroll halaman website sampai pada bagian berikut :<br>
-<img src="screenshot/kirim_pesan.jpg"> <br>
-Setelah itu silahkan mengisi Nama, Email, Nomor HP, dan tuliskan pesan yang akan di sampaikan. <br>
-Lalu tekan tombol Send Message untuk mengirimkan pesan.
+### 4. Melihat artikel
+setelah anda login anda bisa melihat arikel apa saja seperti berita terbaru mengenai handphone
+![WhatsApp Image 2023-11-16 at 22 09 25_830d6671](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/d7b5bab9-7ca3-4dcb-a783-872892e21ce1)
 
 ## Admin
 
-### 1. Login Admin
+### login Admin
+anda dapat login sebagai admin saat memasukan username dan password yang sesuai dengan akun yang sudah dibuatkan khusus untuk admin yaitu username : admin password : admin
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/271c3cd6-28f8-4b36-9067-dfddcd291fb4)
 
-Untuk melakukan Login bisa mengklik tombol <sub>![Logo](https://github.com/ENDUGI1/PA_Pem_Web/blob/main/screenshot/log-in.jpg)</sub> yang tersedia di bagian atas sebelah kanan website. Seperti Tanda berikut : <br>
-<img src="screenshot/halaman_index_tanda.jpg"> <br>
-Di halaman registrasi klik tombol <sub>![Logo](/screenshot/arrow-right-circle.jpg)</sub> maka akan berpindah ke halaman Login seperti berikut :<br>
-<img src="screenshot/halaman_login.jpg"> <br>
-Setelah itu login dengan username **admin** dan password **admin**. <br>
-Lalu tekan tombol Login untuk melakukan Login.
 
-### 2. Menu CRUD Barang
+### Dashboard admin
+setelah anda login, anda langsung masuk ke halaman dashboard admin
+![dashboard admin](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/1c299079-cdff-40ff-9ec0-0e7ee6bce5ff)
 
-Setelah berhasil Login maka admin akan diarahkan ke halaman dashboard seperti berikut : <br>
-<img src="screenshot/halaman_dashboard_admin.jpg">
-Pada halaman ini admin bisa melakukan CRUD barang.
 
-### 3. Tambah Barang
+### dashboard artikel
+lalu anda bisa pilih dashboard artikel untuk mengelola artikel yang ada
+![artikel](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/e19761b9-9a74-4da4-beb2-b0ad1a4057ae)
 
-Untuk menambah barang silahkan klik tombol Tambah. Maka akan muncul halaman Tambah Barang seperti berikut : <br>
-<img src="screenshot/halaman_tambah_data.jpg"> <br>
-Selanjutnya silahkan masukkan Data Barang yang ingin di tambahkan. <br>
 
-> [!NOTE]
->
-> 1. Harga barang Tidak bisa < Rp 10.000 <br>
-> 2. Hanya File Gambar yang dapat di Upload.
+### dashboard barang
+di dashboard barang ini  anda bisa mengelola data barang seperti menghapus, mengedit, menambahkan barang
+![dashboard barang](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/c9f6d4d2-2a86-4ddf-8ece-9712d18b1bf5)
 
-Jika sudah klik tombol Tambah Data untuk menambahkan barang.
+### Tambah barang
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/6d440dcc-30e2-44aa-9911-7e6760eb8fed)
 
-### 4. Update Barang
+### update barang
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/af96a5e1-fbdc-4e2d-b171-082c6bd2ff7a)
 
-Untuk melakukan Update Barang bisa mengklik tombol <sub><img src="screenshot/edit.jpg" width="24px" height="24px"></sub> yang tersedia di sebelah kanan barang yang ingin di Update. <br>
-Maka akan muncul halaman Update Barang seperti berikut : <br>
-<img src="screenshot/halaman_ubah_data.jpg"> <br>
-Selanjutnya silahkan masukkan Data Barang yang ingin di Update. <br>
+### Hapus Barang
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/ff71f45d-dbcd-49f3-b853-0f08b07a25b2)
 
-> [!NOTE]
->
-> 1. Harga barang Tidak bisa < Rp 10.000 <br>
-> 2. Hanya File Gambar yang dapat di Upload.
+### Tambah artikel 
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/d7b14e44-1b09-4ffa-9940-6869a665b468)
 
-Jika sudah klik tombol Edit Data untuk Update barang.
-
-### 5. Delete Barang
-
-Untuk melakukan Hapus Barang bisa mengklik tombol <sub><img src="screenshot/hapus.jpg" width="24px" height="24px"></sub> yang tersedia di sebelah kanan barang yang ingin di Hapus. Maka barang akan langsung terhapus dari Data Barang.
-
-### 6. Lihat Pesan
-
-Untuk melihat pesan silahkan klik tombol Lihat Pesan. Maka akan muncul Halaman Pesan yang berisi semua pesan yang dikirimkan oleh pengguna seperti berikut :
-<br>
-<img src="screenshot/halaman_lihat_pesan.jpg"> <br>
-
-### 7. Delete Pesan
-
-Untuk melakukan Hapus Pesan bisa mengklik tombol <sub><img src="screenshot/hapus.jpg" width="24px" height="24px"></sub> yang tersedia di sebelah kanan pesan yang ingin di Hapus. Maka pesan akan langsung terhapus dari Data Pesan.
-
-### 8. Logout
-
-Untuk melakukan Logout silahkan klik tombol Logout. Maka akan kembali ke halaman index seperti berikut : <br>
-<img src="screenshot/halaman_logout.png"> <br>
+### update artikel
+![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/a07741fa-d4c0-41b3-a78c-faf0027cad2e)
