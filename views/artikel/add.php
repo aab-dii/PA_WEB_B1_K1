@@ -4,7 +4,7 @@
 session_start();
 if (!isset($_SESSION['login']) || ($_SESSION['login'] !== true) || (isset($_SESSION['username']) && $_SESSION['username'] !== 'admin')){
     header('Location: index.php');
-    exit();
+ exit();
 }
 
 if (isset($_POST['tambah'])){
@@ -48,68 +48,31 @@ if (isset($_POST['tambah'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tambah HP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="../../CSS/form.css">
 </head>
 <body>
-
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="judul">Judul :</label>
-        <input type="text" id="judul" name="judul" required autocompleted="off">
-
-        <label for="isi">Isi :</label>
-        <textarea id="deskripsi" name="isi" required></textarea>
-
-        <label for="tanggal">Tanggal :</label>
-        <input type="text" id="tanggal" name="tanggal" required>
-
-        <label for="jenis">Jenis :</label>
-        <input type="text" id="jenis" name="jenis" required>
+    <section>
+        <form class="form" action="" method="post" enctype="multipart/form-data">
+            <span class="title">Create</span>
+            <a href="dashboard.php"><img class="icon" src="../../img/x_icon.png" alt="x-icon"></a>
+            <label for="judul">Judul :</label>
+            <input type="text" id="judul" name="judul" class="input" required autocompleted="off">
+            <label for="isi">Isi :</label>
+            <textarea id="deskripsi" name="isi" class="input" required></textarea>
+            <label for="tanggal">Tanggal :</label>
+            <input type="text" id="tanggal" class="input" name="tanggal" required>
+            <label for="jenis">Jenis :</label>
+            <input type="text" id="jenis" name="jenis" class="input" required>
+            <label for="tentang">Tentang :</label>
+            <select id="tentang" name="tentang">
+                <option class="input" value="Toko">Toko</option>
+                <option class="input" value="Global" selected>Global</option>
+            </select>
+            <label for="gambar">Gambar :</label>
+            <input type="file" id="gambar" name="gambar" class="input" required>
+            <button type="submit" name="tambah" class="submit">Tambah Data</button>
+        </form>
         
-        <label for="tentang">Tentang :</label>
-        <select id="tentang" name="tentang">
-            <option value="Toko">Toko</option>
-            <option value="Global" selected>Global</option>
-        </select>
-
-        <label for="gambar">Gambar :</label>
-        <input type="file" id="gambar" name="gambar" required>
-
-        <input type="submit" name="tambah" value="Tambah Data">
-    </form>
-
+    </section>
 </body>
 </html>

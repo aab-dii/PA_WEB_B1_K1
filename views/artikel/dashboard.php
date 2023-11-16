@@ -31,11 +31,18 @@ while ($row = mysqli_fetch_assoc($result)){
             <li class="dashboard"><a href="#">Dashboard</a></li>
             <li class="barang"><a href="../product/dashboard.php">Kelola Barang</a></li>
             <li class="artikel"><a href="#">Kelola Artikel</a></li>
-            <li class=""><a href="#">Layanan</a></li>
-            <li class="Logout"><a href="#">Log Out</a></li>
+            <li class="Logout"><a href="../logout.php">Log Out</a></li>
         </ul>
     </nav>
     <section>
+        <div class="header">
+            <h1><span>Dashboard </span>Artikel</h1>
+            <div class="waktu">
+                <?php echo date('l'); ?>
+                <?php echo date('Y-m-d '); ?>
+                <div id="liveClock"></div>
+            </div>
+        </div>
         <div class="container-content">
             <button class="add-button"><a href="add.php">Tambah</a></button>
             <div class="wrap">

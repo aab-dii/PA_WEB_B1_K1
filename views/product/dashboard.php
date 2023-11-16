@@ -31,11 +31,18 @@ while ($row = mysqli_fetch_assoc($result)){
             <li class="dashboard"><a href="#">Dashboard</a></li>
             <li class="barang"><a href="#">Kelola Barang</a></li>
             <li class="artikel"><a href="../artikel/dashboard.php">Kelola Artikel</a></li>
-            <li class=""><a href="#">Layanan</a></li>
-            <li class="Logout"><a href="#">Log Out</a></li>
+            <li class="Logout"><a href="../logout.php">Log Out</a></li>
         </ul>
     </nav>
     <section>
+        <div class="header">
+            <h1><span>Dashboard </span>Barang</h1>
+            <div class="waktu">
+                <?php echo date('l'); ?>
+                <?php echo date('Y-m-d '); ?>
+                <div id="liveClock"></div>
+            </div>
+        </div>
         <div class="container-content">
             <button class="add-button"><a href="add.php">Tambah</a></button>
             <div class="wrap">
@@ -88,6 +95,27 @@ while ($row = mysqli_fetch_assoc($result)){
         }
         // Jika pengguna menekan Cancel, tidak ada tindakan tambahan yang diambil
     }
+    function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    // Format the time to ensure two digits
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    // Display the time
+    var currentTime = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('liveClock').innerText = currentTime;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
 </script>
 </body>
 </html>

@@ -58,41 +58,35 @@ if (isset($_POST['update'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/edit.css">
+    <link rel="stylesheet" href="../../CSS/form.css">
     <title>Edit Data</title>
     
 </head>
-    <body>
+<body>  
+    <section>
+        <form class="form" action="" method="post" enctype="multipart/form-data">
 
-        <div class="up-box">
-            <h1>Update Data</h1>
-        </div>
-        <a href="dashboard.php"><img class="icon" src="../../img/x_icon.png" alt="x-icon"></a>
-            <form action="" method="post" enctype="multipart/form-data">
+            <span class="title">Update</span>
+            <a href="dashboard.php"><img class="icon" src="../../img/x_icon.png" alt="x-icon"></a>
             <label for="judul">Judul :</label>
-            <input type="text" id="judul" name="judul" value="<?php echo $art['judul']?>" required>
-
+            <input type="text" id="judul" name="judul" value="<?php echo $art['judul']?>" required class="input" autocompleted="off">
             <label for="isi">Isi :</label>
-            <textarea id="deskripsi" name="isi" value="<?php echo $art['isi']?>" required></textarea>
-
+            <textarea id="deskripsi" name="isi" value="<?php echo $art['isi']?>" class="input" required></textarea>
             <label for="tanggal">Tanggal :</label>
-            <input type="text" id="tanggal" name="tanggal" value="<?php echo $art['tanggal']?>" required>
-
+            <input type="text" id="tanggal" name="tanggal" value="<?php echo $art['tanggal']?>" class="input" name="tanggal" required>
             <label for="jenis">Jenis :</label>
-            <input type="text" id="jenis" name="jenis" value="<?php echo $art['jenis']?>" required>
-            
+            <input type="text" id="jenis" name="jenis" value="<?php echo $art['jenis']?>" class="input" required>
             <label for="tentang">Tentang :</label>
             <select id="tentang" name="tentang">
-                <option value="Toko">Toko</option>
-                <option value="Global" selected>Global</option>
+                <option class="input" value="Toko">Toko</option>
+                <option class="input" value="Global" selected>Global</option>
             </select>
-
             <label for="gambar">Gambar :</label>
             <img src="../../assets/artikel/<?php echo $art["gambar"] ?>" alt="" width="100px"height="100px">
-            <input type="file" id="gambar" name="gambar" required>
-
-            <input type="submit" name="update" value="Update Data">
+            <input type="file" id="gambar" name="gambar" class="input" required>
+            <button type="submit" name="update" class="submit">Update Data</button>
         </form>
+        </section>
     </body>
 </html>
 
