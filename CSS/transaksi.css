@@ -82,6 +82,10 @@
     display: none;
   }
 
+  .navbar-extra{
+    display: none;
+  }
+
   .navbar-nav{
     display: flex;
     align-items: center;
@@ -191,7 +195,7 @@
   .form-wrapper{
     margin: 25px auto;
     padding: 20px 10px;
-    background: linear-gradient(to right, #fff 40.73%, #2c3e50 40.83%);
+    background: linear-gradient(to right, #fff 40.73%, #000000 40.83%);
     position: relative;
     overflow: hidden;
     color: #2c3e50;

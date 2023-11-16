@@ -64,7 +64,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
         <div class="navbar-nav">
-            <a href="index.php">Home </a>
+            <a href="home.php">Home </a>
             <a href="produk.php">Katalog Produk </a>
             <a href="#contact">Kontak</a>
             <a class="profile" href="logout.php"><img src="../img/profile.png" alt=""><?php echo $_SESSION['username'] ?></a>
@@ -198,10 +198,10 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         <div class="container-footer">
             <div class="tentang">
                 <h3>Toko Handphone</h3>
-                <a href="">Home</a>
-                <a href="">Tentang Toko Handphone</a>
-                <a href="">Katalog</a>
-                <a href="">Artikel</a>
+                <a href="home.php">Home</a>
+                <a href="home.php">Tentang Toko Handphone</a>
+                <a href="produk.php">Katalog</a>
+                <a href="homeartikel.php">Artikel</a>
             </div>
             <div id="kontak" class="contact">
                 <h2>Contact <span>Us</span></h2>

@@ -54,7 +54,6 @@ $artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
 
         <div class="navbar-nav">
         <a href="home.php#home">Home</a>
-            <a href="home.php#about">About</a>
             <a href="home.php#katalog">Katalog</a>
             <a href="homeartikel.php">Artikel</a>
             <a href="#kontak">Kontak</a>
@@ -118,10 +117,10 @@ $artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
         <div class="container-footer">
             <div class="tentang">
                 <h3>Toko Handphone</h3>
-                <a href="">Home</a>
-                <a href="">Tentang Toko Handphone</a>
-                <a href="">Katalog</a>
-                <a href="">Artikel</a>
+                <a href="home.php">Home</a>
+                <a href="home.php">Tentang Toko Handphone</a>
+                <a href="produk.php">Katalog</a>
+                <a href="homeartikel.php">Artikel</a>
             </div>
             <div id="kontak" class="contact">
                 <h2>Contact <span>Us</span></h2>

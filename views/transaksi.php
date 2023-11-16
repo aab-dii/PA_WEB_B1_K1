@@ -9,12 +9,6 @@ if(!isset($_SESSION['login'])) {
     exit;
 }
 
-// if(!isset($_POST['quantity'])) {
-//     $_SESSION['error_message'] = "Anda harus mengakses halaman ini melalui formulir pembelian.";
-//     header("Location: produk.php");
-//     exit;
-// }
-
 $id_barang = $_SESSION['id_barang'];
 $id_pengguna = $_SESSION['id'];
 $qty = $_SESSION['qty'];
@@ -78,7 +72,7 @@ $data_user = [];
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
         <div class="navbar-nav">
-            <a href="index.php">Home </a>
+            <a href="home.php">Home </a>
             <a href="produk.php">Katalog Produk </a>
             <a href="#contact">Kontak</a>
             <a class="profile" href="logout.php"><img src="../img/profile.png" alt=""><?php echo $_SESSION['username'] ?></a>
