@@ -38,8 +38,11 @@ anda dapat login sebagai admin saat memasukan username dan password yang sesuai 
 
 
 ### Dashboard admin
-setelah anda login, anda langsung masuk ke halaman dashboard admin dan dapat memilih untuk masuk ke artikel barang atau melihat lainnya
+setelah anda login, anda langsung masuk ke halaman dashboard admin 
 ![dashboard admin](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/1c299079-cdff-40ff-9ec0-0e7ee6bce5ff)
+
+anda dapat memilih menu ke dashboard artikel atau dashboard produk
+![pilihan](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/a1d5fb34-227c-4981-b931-96e7a7463354)
 
 
 ### dashboard artikel
@@ -52,16 +55,21 @@ di dashboard barang ini  anda bisa mengelola data barang seperti menghapus, meng
 ![dashboard barang](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/c9f6d4d2-2a86-4ddf-8ece-9712d18b1bf5)
 
 ### Tambah barang
+jika anda ingin menambahkan produk anda dapat ke halaman ini dan mengisi sesuai dengan form 
 ![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/6d440dcc-30e2-44aa-9911-7e6760eb8fed)
 
 ### update barang
+jika anda ingin mengedit produk anda dapat ke halaman ini dan mengisi sesuai form
 ![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/af96a5e1-fbdc-4e2d-b171-082c6bd2ff7a)
 
 ### Hapus Barang
+jika anda ingin menghapus barang, anda akan diberikan pop up apakah anda yakin menghapus ini?
 ![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/ff71f45d-dbcd-49f3-b853-0f08b07a25b2)
 
 ### Tambah artikel 
+tambah artikel dengan mengisi form yang disediakan
 ![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/d7b14e44-1b09-4ffa-9940-6869a665b468)
 
 ### update artikel
+update artikel dengan mengisi form yang disediakan
 ![image](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/a07741fa-d4c0-41b3-a78c-faf0027cad2e)
