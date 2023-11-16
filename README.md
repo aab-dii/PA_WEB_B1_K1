@@ -19,11 +19,12 @@ Sebelum Login anda harus melakukan registrasi terlebih dahulu
 
 
 ### 2. Login
+setelah registrasi anda bisa melakukan login , anda bisa login sebagai admin atau user
+![Screenshot 2023-11-16 214609](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/33669eb0-3daf-401a-8d73-c73eaa29669e)
 
 ### 3. Logout
-
-Untuk melakukan Logout silahkan klik tombol <sub><img src="screenshot/icon_logout_user.jpg" width="24px" height="24px"></sub> yang berada di atas sebelah kanan website. Maka akan kembali ke halaman index seperti berikut : <br>
-<img src="screenshot/halaman_index.jpg"> <br>
+Untuk melakukan Logout silahkan pencet logo profil pada halaman manapun (setelah anda login akan muncul logo profil)
+![Screenshot 2023-11-16 215022](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/bf68bc2c-1c0d-4bde-8755-d89814ac531c)
 
 ### 4. Mengirim Pesan Ke Admin
 
