@@ -104,6 +104,26 @@ section{
   display: none;
 }
 
+.profile{
+  width: 130px;
+  height: 50px;
+}
+
+.profile a{
+  display: flex;
+  align-items: center;
+}
+
+.profile a h4{
+  text-decoration: none;
+  color:white    
+}
+
+.profile-btn img{
+  margin: 5px;
+  max-width: 30px;
+}
+
 /* hero section */
 .hero {
   min-height: 100vh;

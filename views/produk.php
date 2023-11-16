@@ -66,7 +66,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                 <!-- <button type="submit" id="search"><i data-feather="search"></i></button> -->
             </form>
             <div class="nam">
-                <a href="index.php">Home</a>
+                <a href="home.php">Home</a>
                 <a href="produk.php">Katalog Produk</a>
                 <a href="logout.php">Log Out</a>
             </div>
