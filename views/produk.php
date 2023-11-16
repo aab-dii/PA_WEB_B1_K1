@@ -51,8 +51,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
     <title>Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <!-- ICON -->
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -64,13 +63,14 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         <div class="navbar-nav">
             <form action="produk.php" method="get" class="search-form">
                 <input type="text" name="search" placeholder="Cari...">
-                <button type="submit">Cari</button>
+                <!-- <button type="submit" id="search"><i data-feather="search"></i></button> -->
             </form>
-            <a href="index.html">Home</a>
+
+            <a href="index.php">Home</a>
             <a href="produk.php">Katalog Produk</a>
             <a href="login.php">Login/Register</a>
             <a href="homeartikel.php">Artikel</a>
-            <a href="homeartikel.php">LogOut</a>
+            <a href="logout.php">LogOut</a>
         </div>
         <div class="navbar-extra">
             <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
@@ -102,7 +102,6 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                 <!-- Tambahkan checkbox untuk merk lainnya sesuai kebutuhan -->
                 <input type="submit" name="filter" value="Filter">
             </form>
-
         </aside>
         <section>
             <?php if (isset($_GET['search'])) : ?>
