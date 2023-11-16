@@ -1,0 +1,606 @@
+:root {
+    --primary: #ff0000;
+    --bg: rgb(0, 0, 0);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+    min-height: 2000px;
+  }
+  
+  section{
+    min-height: 70vh;
+  }
+  
+  /* css navbarnya */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 7%;
+    background-color: rgba(0, 0, 0, 0.700);
+    border-bottom: 1px solid rgba(160, 160, 160);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: .1em;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 1rem;
+    margin-top: .8em;
+  }
+  
+  /* login regis */
+
+  /* login regis end */
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  .navbar-extra{
+    display: none;
+  }
+  
+  #hamburger-menu {
+    display: none;
+  }
+
+  .profile{
+    margin: 0 1rem;
+    /* padding-bottom: .8em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+
+  .profile img{
+    height: 30px;
+    margin: 0 auto;
+    margin: 10px;
+    width: 30px;
+  }
+  
+  /* hero section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/shiwa-id-bFXjg2wSVDo-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero::after{
+    content:'';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255,255,255,0) 50% );
+  }
+  
+  .hero .content {
+    padding: 1.5rem 7%;
+    max-width: 60rem;
+  }
+  
+  .hero .content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+  }
+  
+  .hero .content h1 span {
+    color: var(--primary);
+  }
+  
+  .hero .content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    /* font-weight: 80; */
+    text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+    /* mix-blend-mode: difference; untuk tulisan yg tertimpa bacground/sama warnnanya dgn background */
+  }
+  .hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    transition: transform ease 0.5s;
+  }
+  
+  .hero .content .cta:hover {
+    transform: scale(1.1);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .person {
+    text-align: center;
+    background-color: #9c9c9c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(158, 158, 158, 0.1);
+    margin: 20px;
+    min-height: 500px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 500px;
+    background-image: linear-gradient(163deg, #ff0000 0%, #000000 100%);
+    border-radius: 20px;
+    transition: all .3s;
+  }
+  
+  .card2 {
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    height: 500px;
+    background-color: #9c9c9c;
+    border-radius:20px;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(1);
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.25);
+    box-shadow: 0px 0px 30px 1px rgba(255, 0, 0, 0.763);
+   }
+  
+  .card2 img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .card2 h3 {
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  .card2 h4 {
+    color: #000000;
+  }
+  
+  .card2 p {
+    color: #000000;
+  }
+  /* About shop */
+  .about {
+    padding: 10rem 7% 1.4rem;
+  }
+  
+  .about h2 {
+    text-align:left;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  
+  .about h2 span {
+    color: var(--primary);
+  }
+  
+  .about .row {
+    display: flex;
+  }
+  /* about us*/
+  .aboutus {
+    padding: 10rem 7% 1.4rem;
+  }
+  
+  .aboutus h5 {
+    text-align:left 2px;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  .aboutus h5 span {
+    color: var(--primary);
+  }
+  /* us */
+  .about .row .about-img {
+    flex: 1 1 45rem;
+  }
+  
+  .about .row .about-img img {
+    width: 100%;
+  }
+  
+  .about .row .content_as {
+    flex:  1 1 35rem;
+    padding: 0 1rem;
+  }
+  
+  .about .row .content_as h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about .row .content_as p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    /* font-weight: 100; */
+    line-height: 1.6;
+    color: #fff;
+  }
+  .hp {
+    margin: 10vh 0 40vh 0;
+    padding: 10rem 7% 1.4rem;
+    min-height: 60vh;
+  }
+  
+  .content_hp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .product-content {
+    width: 100%;
+    /* margin: 0 auto; Menambahkan margin otomatis pada sisi kiri dan kanan */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10vh ;
+  }
+  
+  .product-card {
+    width: 14%;
+    max-height: 290px;
+    margin: 10px ;
+    background-color: #EEEBDD;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform ease 0.5s;
+  }
+  
+  .product-card:hover{
+    transform: scale(1.1);
+  }
+  
+  .product-card img {
+    width: 100%; /* Sesuaikan tinggi yang diinginkan */
+    object-fit: cover; /* Menjaga aspek rasio gambar */
+    border-radius: 10px;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0;
+  }
+  
+  .content_hp h2{
+    margin-bottom: 20px 0;
+    font-size: 2.6rem;
+  }
+  
+  .content_hp h2 span{
+      color: var(--primary);
+  }
+  
+  .product-card h3 p{
+    color: var(--bg);
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .container-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .container-footer a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .contact{
+    align-items: flex-start;
+  }
+  
+  .contact h2 span{
+    color: var(--primary);
+  }
+  
+  .tentang{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cardc {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .footlogo .footer-logo{
+    display: flex;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: .1em;
+    font-style: italic;
+  }
+  
+  .footlogo .footer-logo span {
+    color: var(--primary);
+  }
+  /* buat responsiv pake media queries */
+  /* buat untuk laptop tab dan hp */
+  @media (max-width: 1024px) {
+      html {
+          font-size: 75%;
+      }
+  }
+  
+  /* tab */
+  @media (max-width: 768px) {
+      html {
+          font-size: 62.5%;
+    }
+    #hamburger-menu {
+      display: inline-block;
+    }
+    .navbar-extra{
+      display: block;
+    }
+    
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #000000; /* warna dri hamburger menu nya*/
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+  
+      }
+      .navbar .navbar-nav.active {
+          right: 0;
+      }
+  
+  .navbar .navbar-nav a{
+      color: white;
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .profile{
+      display: block;
+    }
+  
+      .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+      }
+  
+      .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+      }
+  
+      .about .row{
+        flex-wrap: wrap; 
+      }
+  
+      .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .about .row .content{
+        padding: 0;
+      }
+  
+      .about .row .content h3{
+        margin-top: 1rem;
+        font-size: 1.6rem;
+      }
+  }
+  
+  /* hp */
+  @media (max-width: 576px) {
+      html {
+          font-size: 50%;
+      }
+      #hamburger-menu {
+          display: inline-block;
+      }
+      .navbar-extra{
+        display: block;
+      }
+  }
+  /* footer */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    /* bottom: 0px;   */
+    width: 100%;
+    border-top: 1px solid rgba(160, 160, 160);
+  }
+  /* ADMIN DASHBOARD */
+  
+  
+  /* Gaya tautan navbar */
+  .navbar-nav a {
+      color: #df1a1a;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s; /* Efek transisi warna saat hover */
+  }
+  
+  /* Gaya tautan navbar yang aktif */
+  .navbar-nav a.active {
+      color: #ff0000;
+      border-bottom: 1px solid #ff0000;
+      /* tambahkan properti lain sesuai kebutuhan Anda */
+  }
+  
+  /* Gaya tautan navbar pada tampilan kecil */
+  @media screen and (max-width: 600px) {
+      .navbar-nav {
+          flex-direction: column;
+      }
+      .navbar-extra{
+        display: block;
+      }
+  }
+  

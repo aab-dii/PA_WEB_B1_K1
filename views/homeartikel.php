@@ -53,9 +53,9 @@ $artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
         <div class="navbar-nav">
-        <a href="index.php#home">Home</a>
-            <a href="index.php#about">About</a>
-            <a href="index.php#katalog">Katalog</a>
+        <a href="home.php#home">Home</a>
+            <a href="home.php#about">About</a>
+            <a href="home.php#katalog">Katalog</a>
             <a href="homeartikel.php">Artikel</a>
             <a href="#kontak">Kontak</a>
         </div>
@@ -109,6 +109,7 @@ $artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
                     </div>
                 </a>
                 <?php endforeach; ?>
+
                 <!-- Tambahkan artikel lainnya sesuai kebutuhan -->
             </div>
         </div>

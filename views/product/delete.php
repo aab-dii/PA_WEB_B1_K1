@@ -1,6 +1,12 @@
 <?php
 @include '../../koneksi/config.php';
 
+session_start();
+if (!isset($_SESSION['login']) || ($_SESSION['login'] !== true) || (isset($_SESSION['username']) && $_SESSION['username'] !== 'admin')){
+    header('Location: index.php');
+    exit();
+}
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $result = mysqli_query($conn, "SELECT * FROM hp_form WHERE id = $id");

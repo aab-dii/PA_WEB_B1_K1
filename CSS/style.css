@@ -104,7 +104,7 @@ section{
   display: none;
 }
 
-.profile{
+/* .profile{
   width: 130px;
   height: 50px;
 }
@@ -122,7 +122,7 @@ section{
 .profile-btn img{
   margin: 5px;
   max-width: 30px;
-}
+} */
 
 /* hero section */
 .hero {

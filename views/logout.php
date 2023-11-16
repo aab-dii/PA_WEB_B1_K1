@@ -4,5 +4,10 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: index.html")
+echo "
+<script>
+  alert('Anda Telah Logout');
+  window.location.href = 'index.php'; 
+</script>";
+
 ?>

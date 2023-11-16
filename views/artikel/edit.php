@@ -1,6 +1,12 @@
 <?php
 @include '../../koneksi/config.php';
 
+session_start();
+if (!isset($_SESSION['login']) || ($_SESSION['login'] !== true) || (isset($_SESSION['username']) && $_SESSION['username'] !== 'admin')){
+    header('Location: index.php');
+    exit();
+}
+
 $id = $_GET['id'];
 $query = "SELECT * FROM artikel WHERE id=$id";
 $result = mysqli_query($conn, $query);

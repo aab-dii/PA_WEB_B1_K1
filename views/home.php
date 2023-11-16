@@ -1,7 +1,12 @@
 <?php
-    include '../koneksi/config.php';
+include '../koneksi/config.php';
 
-    session_start();
+session_start();
+
+if(!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
 
     $id = [18, 9, 19, 20, 21];
     $id_string = implode(',', $id); // Menggabungkan nilai array menjadi string terpisah koma
@@ -21,22 +26,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/home.css">
 </head>
 
 <body>
     <!-- navbar start  --> <!-- Guna span untuk misahkan untuk ubah warna jadi primary -->
-    <nav class="navbar">
-        <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
+    <nav class="navbar">    
+    <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
         <div class="navbar-nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#katalog">Katalog</a>
             <a href="homeartikel.php">Artikel</a>
             <a href="#kontak">Kontak</a>
+            <a class="profile" href="logout.php"><img src="../img/profile.png" alt=""><?php echo $_SESSION['username'] ?></a>
         </div>
-        <div class="profile">
-            <a class="profile-btn" href=""><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
     </nav>
     <!-- navbar end -->
@@ -166,7 +173,7 @@
         feather.replace();
     </script>
     <!-- javascript -->
-    <script src="../js/script.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 
 </html>

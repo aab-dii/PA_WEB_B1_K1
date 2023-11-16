@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
+  //scroll fungction
   const revealElements = document.querySelectorAll(".reveal");
 
   function checkScroll() {
