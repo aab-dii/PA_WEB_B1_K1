@@ -44,7 +44,7 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
         <div class="navbar-nav">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="#about">About Us</a>
             <a href="#menu">Menu</a>
             <a href="#contact">Kontak</a>
