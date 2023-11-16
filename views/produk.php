@@ -189,8 +189,6 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
             </div>
             <?php endif; ?>
         </section>
-
-
     </div>
     <footer>
         <div class="container-footer">
