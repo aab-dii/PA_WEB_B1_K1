@@ -65,12 +65,11 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                 <input type="text" name="search" placeholder="Cari...">
                 <!-- <button type="submit" id="search"><i data-feather="search"></i></button> -->
             </form>
-
-            <a href="index.php">Home</a>
-            <a href="produk.php">Katalog Produk</a>
-            <a href="login.php">Login/Register</a>
-            <a href="homeartikel.php">Artikel</a>
-            <a href="logout.php">LogOut</a>
+            <div class="nam">
+                <a href="index.php">Home</a>
+                <a href="produk.php">Katalog Produk</a>
+                <a href="logout.php">Log Out</a>
+            </div>
         </div>
         <div class="navbar-extra">
             <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
@@ -99,8 +98,20 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                 <label>
                     <input type="checkbox" class="filter-checkbox" name="merk[]" value="Vivo"> Vivo
                 </label>
+                <label>
+                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Redmi"> Redmi
+                </label>
+                <label>
+                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Poco"> Poco
+                </label>
+                <label>
+                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Samsung"> Samsung
+                </label>
+                <label>
+                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Realme"> Realme
+                </label>
                 <!-- Tambahkan checkbox untuk merk lainnya sesuai kebutuhan -->
-                <input type="submit" name="filter" value="Filter">
+                <input class="inpt" type="submit" name="filter" value="Filter">
             </form>
         </aside>
         <section>

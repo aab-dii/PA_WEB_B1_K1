@@ -1,5 +1,5 @@
 :root {
-    --primary: rgb(202, 0, 253);
+    --primary: #ff0000;
     --bg: rgb(0, 0, 0);
   }
   
@@ -51,6 +51,13 @@ body {
     text-decoration: none;
 }
 
+.nam{
+    padding-left: 700px;
+}
+.navbar .navbar-nav {
+    display: flex;
+}
+
 .navbar-nav {
     display: flex;
     justify-content: space-between;
@@ -80,7 +87,7 @@ body {
 }
 
 .navbar .navbar-extra a {
-    color: #fff;
+    color: #ed0404;
     margin: 0 0.5rem;
     text-decoration: none;
 }
@@ -94,8 +101,11 @@ body {
   
   .search-form {
     display: flex;
-    margin-right: 70px;
+    padding-left: 300px;
+    position: absolute;
 }
+
+
 
 .search-form input {
     padding: 8px;
@@ -160,8 +170,7 @@ body {
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
+
     min-width: 200px;
     max-height: 50vh;
     padding: 20px;
@@ -169,10 +178,25 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 100px;
+
+}
+
+
+.sidebar form{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    
+}
+
+.sidebar form .inpt{
+    bottom: 0;
 }
 
 .sidebar h2 {
     margin-bottom: 10px;
+    display: block;
+    flex-direction: column;
 }
 
 /* .sidebar ul {
