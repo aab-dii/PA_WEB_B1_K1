@@ -99,23 +99,20 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                     <input type="checkbox" class="filter-checkbox" name="merk[]" value="Vivo"> Vivo
                 </label>
                 <label>
-                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Redmi"> Redmi
-                </label>
-                <label>
-                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Poco"> Poco
-                </label>
-                <label>
                     <input type="checkbox" class="filter-checkbox" name="merk[]" value="Samsung"> Samsung
                 </label>
                 <label>
                     <input type="checkbox" class="filter-checkbox" name="merk[]" value="Realme"> Realme
+                </label>
+                <label>
+                    <input type="checkbox" class="filter-checkbox" name="merk[]" value="Infinix"> Infinix
                 </label>
                 <!-- Tambahkan checkbox untuk merk lainnya sesuai kebutuhan -->
                 <input class="input" type="submit" name="filter" value="Filter">
             </form>
         </aside>
         <section>
-            <?php if (isset($_GET['search'])) : ?>
+            <?php if (isset($_GET['search']) || isset($_GET['merk'])) : ?>
             <div class="content normal">
                 <h2>Hasil Pencarian</h2>
                 <div class="product-content">

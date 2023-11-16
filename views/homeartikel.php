@@ -20,10 +20,10 @@ if (isset($_GET['search'])) {
         $selectedMerk = $_GET['merk'];
 
         // Membuat klausa WHERE berdasarkan nilai merk yang dipilih
-        $whereClause = " WHERE merk IN ('" . implode("', '", $selectedMerk) . "')";
+        $where = " WHERE merk IN ('" . implode("', '", $selectedMerk) . "')";
         
         // Menyusun query dengan klausa WHERE
-        $query = "SELECT * FROM artikel" . $whereClause;
+        $query = "SELECT * FROM artikel" . $where;
         
         // Menjalankan query
         $tampil = mysqli_query($conn, $query);

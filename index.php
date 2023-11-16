@@ -46,7 +46,7 @@
         <main class="content reveal">
             <h1>Toko <span>Handphone</span></h1>
             <p>Toko kami menyediakan berbagai macam handphone untuk kebutuhan gadget anda. Tunggu apalagi ayoo !!!</p>
-            <a href="login.php" class="cta">Beli Sekarang</a>
+            <a href="views/login.php" class="cta">Beli Sekarang</a>
         </main>
     </section>
     <!-- hero section end -->
