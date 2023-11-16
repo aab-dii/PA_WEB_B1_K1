@@ -60,8 +60,9 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
     <nav class="navbar">
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
-        <nav class="navbar">    
-        <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
+        <form action="produk.php" method="get" class="search-form">
+            <input type="text" name="search" placeholder="Cari...">
+        </form>
 
         <div class="navbar-nav">
             <a href="home.php">Home </a>

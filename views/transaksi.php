@@ -112,10 +112,10 @@ $data_user = [];
         <div class="container-footer">
             <div class="tentang">
                 <h3>Toko Handphone</h3>
-                <a href="">Home</a>
-                <a href="">Tentang Toko Handphone</a>
-                <a href="">Katalog</a>
-                <a href="">Artikel</a>
+                <a href="home.php">Home</a>
+                <a href="home.php">Tentang Toko Handphone</a>
+                <a href="produk.php">Katalog</a>
+                <a href="homeartikel.php">Artikel</a>
             </div>
             <div id="kontak" class="contact">
                 <h2>Contact <span>Us</span></h2>

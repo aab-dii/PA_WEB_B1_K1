@@ -1,6 +1,5 @@
 <?php
-    include '../koneksi/config.php';
-
+    include 'koneksi/config.php';
 
     $id = [18, 9, 19, 20, 21];
     $id_string = implode(',', $id); // Menggabungkan nilai array menjadi string terpisah koma
@@ -20,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
@@ -31,9 +30,9 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#katalog">Katalog</a>
-            <a href="homeartikel.php">Artikel</a>
+            <a href="views/homeartikel.php">Artikel</a>
             <a href="#kontak">Kontak</a>
-            <a href="login.php" id="login">
+            <a href="views/login.php" id="login">
                 <button class="btnlogin">Login / Register</button>
             </a>
         </div>
@@ -56,7 +55,7 @@
         <h2><span>About</span> Shop</h2>
         <div class="row">
             <div class="about-img">
-                <img src="../img/aboutshop.img.jpg" alt="About Us">
+                <img src="img/aboutshop.img.jpg" alt="About Us">
             </div>
             <div class="content_as">
                 <h3>About Shop</h3>
@@ -69,7 +68,7 @@
         <div class="container">
             <div class="card">
                 <div class="card2">
-                    <img src="../img/abdi2.jpg" alt="Person 1">
+                    <img src="img/abdi2.jpg" alt="Person 1">
                     <h3>Muhammad Abdillah</h3>
                     <h4>Back-End</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
@@ -77,7 +76,7 @@
             </div>
             <div class="card">
                 <div class="card2">
-                    <img src="../img/tommy2.jpg" alt="Person 1">
+                    <img src="img/tommy2.jpg" alt="Person 1">
                     <h3>Tommy Candra Gunawan</h3>
                     <h4>Front-End</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
@@ -85,7 +84,7 @@
             </div>
             <div class="card">
                 <div class="card2">
-                    <img src="../img/cici2.jpg" alt="Person 1">
+                    <img src="img/cici2.jpg" alt="Person 1">
                     <h3>Rifki Nurhidayat</h3>
                     <h4>Front-End</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget feugiat libero.</p>
@@ -99,8 +98,8 @@
             <h2>Pilihan Terbaik <span> Kami</span></h2>
             <div class="product-content">
                 <?php foreach ($hp as $normal) : ?>
-                <a href="produk.php" class="product-card">
-                    <img src="../assets/<?php echo $normal['gambar']; ?>" alt="Product 1">
+                <a href="views/produk.php" class="product-card">
+                    <img src="assets/<?php echo $normal['gambar']; ?>" alt="Product 1">
                     <h3>
                         <?php echo $normal['nama']; ?>
                     </h3>
@@ -119,8 +118,8 @@
                 <h3>Toko Handphone</h3>
                 <a href="index.php">Home</a>
                 <a href="index.php">Tentang Toko Handphone</a>
-                <a href="produk.php">Katalog</a>
-                <a href="homeartikel.php">Artikel</a>
+                <a href="views/produk.php">Katalog</a>
+                <a href="views/homeartikel.php">Artikel</a>
             </div>
             <div id="kontak" class="contact">
                 <h2>Contact <span>Us</span></h2>
@@ -168,7 +167,7 @@
         feather.replace();
     </script>
     <!-- javascript -->
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

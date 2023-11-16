@@ -93,8 +93,8 @@ justify-content: center;
     transform: scaleX(0.5);
 }
 
-.navbar-nav form{
-    margin: 20px;
+.navbar form input{
+    width: 50vh;
 }
 
 .navbar .navbar-extra a {

@@ -60,7 +60,7 @@ $artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
         </div>
 
         <div class="profile">
-            <a class="profile-btn" href=""><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
+            <a class="profile-btn" href="logout.php"><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
         </div>
     </nav>
     

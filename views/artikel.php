@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
 
         <div class="profile">
-        <a class="profile-btn" href=""><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
+        <a class="profile-btn" href="logout.php"><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
         </div>
     </nav>
 
