@@ -3,8 +3,8 @@
 
 session_start();
 if (!isset($_SESSION['login']) || ($_SESSION['login'] !== true) || (isset($_SESSION['username']) && $_SESSION['username'] !== 'admin')){
-    header('Location: index.php');
-    exit();
+    header('Location: ../../index.php');
+ exit();
 }
 
 $result = mysqli_query($conn, "SELECT * FROM hp_form");
@@ -28,7 +28,7 @@ while ($row = mysqli_fetch_assoc($result)){
 <body>
 <nav class="sidebar">
         <ul>
-            <li class="dashboard"><a href="#">Dashboard</a></li>
+            <li class="dashboard"><a href="../dashboard.php">Dashboard</a></li>
             <li class="barang"><a href="#">Kelola Barang</a></li>
             <li class="artikel"><a href="../artikel/dashboard.php">Kelola Artikel</a></li>
             <li class="Logout"><a href="../logout.php">Log Out</a></li>

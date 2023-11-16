@@ -351,6 +351,12 @@ section{
 
 .product-card h3 {
   margin: 10px 0;
+  font-size: 17px;
+}
+
+.product-card h3, .product-card p{
+  text-decoration: none;
+  color: black;
 }
 
 .content_hp h2{

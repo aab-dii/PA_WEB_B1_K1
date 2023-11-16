@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
     else if($username == "admin" && $password == "admin"){
         $_SESSION["login"] = true;
         $_SESSION["username"] = $username;
-        header("Location: product/dashboard.php");
+        header("Location: dashboard.php");
         exit;
     }   
     $error = true;
