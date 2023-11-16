@@ -1,5 +1,5 @@
 :root {
-    --primary: rgb(202, 0, 253);
+    --primary: #ff0000;
     --bg: rgb(0, 0, 0);
   }
   
@@ -46,7 +46,7 @@
   
   .navbar .navbar-nav a {
     color: #fff;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 1.3rem;
     margin: 0 1rem;
   }
@@ -78,6 +78,27 @@
   
   #hamburger-menu {
     display: none;
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+  }
+
+  .profile{
+    margin: 0 1rem;
+    /* padding-bottom: .8em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+
+  .profile img{
+    height: 30px;
+    margin: 0 auto;
+    margin: 10px;
+    width: 30px;
   }
   
   .container {
@@ -140,8 +161,7 @@
     margin-bottom: 10px;
 }
 
-.deskripsi p,
-.deskripsi p.collapsed {
+.deskripsi p{
     max-width: 400px;   
     padding: 10px;
     min-height: fit-content;
@@ -150,11 +170,15 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    background-color: rgb(227, 227, 227);
+    border-radius: 10px;
 }
 
 .deskripsi p.collapsed {
     overflow: visible;
     white-space: pre-wrap;
+    background-color: rgb(227, 227, 227);
+    border-radius: 10px;
 }
 
 .deskripsi.collapsed-button {
@@ -184,19 +208,17 @@
     flex: 0 0 25%;
     margin-left: 10px;
     /* padding: 10px; */
+    
 }
 
-form {
+.form-keranjang form {
     max-width: 300px;
     margin: 0 auto;
-    /* border: 1px solid black; */
     position: sticky;
     top: 15vh;
     padding: 10px;
     border-radius: 12px;
-background: #ebebeb;
-box-shadow:  15px 15px 30px #b0b0b0,
-             -15px -15px 30px #ffffff;
+    border: 1px solid red;
 }
 
 label {
@@ -204,20 +226,28 @@ label {
     margin-bottom: 8px;
 }
 
-input {
-    width: 50%;
+.input {
+    width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
     border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+}
+
+.input:focus{
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #b70404;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #ff0000;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 
@@ -227,10 +257,13 @@ button {
     border-top: 1px solid black ;
 }
 
-form .comment-form {
-    border-top: 1px solid black ;
+.comment-form {
+    margin: 0 auto;
+    border: 1px solid red;
     margin-top: 20px;
-    width: 100%;
+    width: 90vh;
+    padding: 10px;
+    border-radius: 12px;
 }
 
 form input{
@@ -275,7 +308,7 @@ form input{
 }
 
 .comment-form button {
-    background-color: #4CAF50;
+    background-color: rgb(255, 0, 0);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -284,13 +317,6 @@ form input{
 
 .comment-form button:hover {
     background-color: #45a049;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
 }
 
 .social-media {
@@ -305,3 +331,126 @@ form input{
     width: 30px;
     height: 30px;
 }
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    /* bottom: 0px;   */
+    width: 100%;
+    border-top: 1px solid rgba(160, 160, 160);
+  }
+
+.container-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .container-footer a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .contact{
+    align-items: flex-start;
+  }
+  
+  .contact h2 span{
+    color: var(--primary);
+  }
+  
+  .tentang{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cardc {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .footlogo .footer-logo{
+    display: flex;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: .1em;
+    font-style: italic;
+  }
+  
+  .footlogo .footer-logo span {
+    color: var(--primary);
+  }

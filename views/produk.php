@@ -60,21 +60,20 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
     <nav class="navbar">
         <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
 
+        <nav class="navbar">    
+        <a href="#" class="navbar-logo">Toko<span>Handphone</span></a>
+
         <div class="navbar-nav">
-            <form action="produk.php" method="get" class="search-form">
-                <input type="text" name="search" placeholder="Cari...">
-                <!-- <button type="submit" id="search"><i data-feather="search"></i></button> -->
-            </form>
-            <div class="nam">
-                <a href="home.php">Home</a>
-                <a href="produk.php">Katalog Produk</a>
-                <a href="logout.php">Log Out</a>
-            </div>
+            <a href="index.php">Home </a>
+            <a href="produk.php">Katalog Produk </a>
+            <a href="#contact">Kontak</a>
+            <a class="profile" href="logout.php"><img src="../img/profile.png" alt=""><?php echo $_SESSION['username'] ?></a>
         </div>
+    
         <div class="navbar-extra">
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
+    </nav>
 
     </nav>
 
@@ -111,7 +110,7 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
                     <input type="checkbox" class="filter-checkbox" name="merk[]" value="Realme"> Realme
                 </label>
                 <!-- Tambahkan checkbox untuk merk lainnya sesuai kebutuhan -->
-                <input class="inpt" type="submit" name="filter" value="Filter">
+                <input class="input" type="submit" name="filter" value="Filter">
             </form>
         </aside>
         <section>
@@ -229,37 +228,6 @@ $hp = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         </div>
     </footer>
     <script src="../js/script.js">
-        // Handle form submission
-        // document.getElementById('filterForm').addEventListener('submit', function (event) {
-        //     event.preventDefault(); // Prevent form submission
-
-        //     // Get selected merk values
-        //     var selectedMerk = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
-        //         .map(function (checkbox) {
-        //             return checkbox.value;
-        //         });
-
-        //     // Perform filtering based on selectedMerk
-        //     filterProducts(selectedMerk);
-        // });
-
-        // // Function to filter products based on selected merk
-        // function filterProducts(selectedMerk) {
-        //     var products = document.querySelectorAll('.product');
-
-        //     products.forEach(function (product) {
-        //         var productMerk = product.getAttribute('data-merk');
-
-        //         if (selectedMerk.length === 0 || selectedMerk.includes(productMerk)) {
-        //             // Show the product if no merk is selected or if the product's merk is in the selected list
-        //             product.style.display = 'block';
-        //         } else {
-        //             // Hide the product if the product's merk is not in the selected list
-        //             product.style.display = 'none';
-        //         }
-        //     });
-        // }
-
     </script>
 </body>
 
