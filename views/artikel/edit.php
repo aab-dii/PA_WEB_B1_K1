@@ -64,16 +64,16 @@ if (isset($_POST['update'])){
         <a href="dashboard.php"><img class="icon" src="../../img/x_icon.png" alt="x-icon"></a>
             <form action="" method="post" enctype="multipart/form-data">
             <label for="judul">Judul :</label>
-            <input type="text" id="judul" name="judul" required>
+            <input type="text" id="judul" name="judul" value="<?php echo $art['judul']?>" required>
 
             <label for="isi">Isi :</label>
-            <input type="text" id="isi" name="isi" required>
+            <input type="text" id="isi" name="isi" value="<?php echo substr($art['isi'], 0, 100) . "..." ?>" required>
 
             <label for="tanggal">Tanggal :</label>
-            <input type="text" id="tanggal" name="tanggal" required>
+            <input type="text" id="tanggal" name="tanggal" value="<?php echo $art['tanggal']?>" required>
 
             <label for="jenis">Jenis :</label>
-            <input type="text" id="jenis" name="jenis" required>
+            <input type="text" id="jenis" name="jenis" value="<?php echo $art['jenis']?>" required>
             
             <label for="tentang">Tentang :</label>
             <select id="tentang" name="tentang">
@@ -82,7 +82,8 @@ if (isset($_POST['update'])){
             </select>
 
             <label for="gambar">Gambar :</label>
-            <input type="file" id="gambar" name="gambar" accept="image/*" required>
+            <img src="../../assets/artikel/<?php echo $art["gambar"] ?>" alt="" width="100px"height="100px">
+            <input type="file" id="gambar" name="gambar" required>
 
             <input type="submit" name="update" value="Update Data">
         </form>

@@ -32,7 +32,7 @@ if (isset($_POST["Register"])) {
             </script>
             ";
         }else{
-            if (move_uploaded_file($temp,'../img/' . $gambar)) {
+            if (move_uploaded_file($temp,'../assets/user/' . $gambar)) {
                     $password = password_hash($password, PASSWORD_DEFAULT);
                     $result = mysqli_query($conn, "INSERT INTO pengguna VALUES('', '$username', '$email', '$password' , '$gambar') ");
                     if (mysqli_affected_rows($conn) > 0) {

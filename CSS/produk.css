@@ -46,7 +46,6 @@ body {
   
   .navbar .navbar-nav a {
     color: #fff;
-    display: inline-block;
     font-size: 1.3rem;
     margin: 0 1rem;
     text-decoration: none;
@@ -58,6 +57,14 @@ body {
 .navbar .navbar-nav {
     display: flex;
 }
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+}
+
   .navbar .navbar-nav a:hover {
     color: var(--primary);
 }
@@ -73,6 +80,10 @@ body {
 
 .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
+}
+
+.navbar-nav form{
+    margin: 20px;
 }
 
 .navbar .navbar-extra a {
@@ -103,7 +114,8 @@ body {
 }
 
 .search-form button {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
+    width: 100px;
     color: #fff;
     border: none;
     border-radius: 4px;

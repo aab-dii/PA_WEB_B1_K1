@@ -16,7 +16,7 @@ if (isset($_POST['tambah'])){
     $tmp = $_FILES['gambar']['tmp_name'];
     
     if(move_uploaded_file($tmp,'../../assets/artikel/'.$gambar_baru)){
-        $result = mysqli_query($conn, "INSERT INTO artikel (id, judul , isi, tanggal, jenis ,tentang ,gambar) VALUES ('','$judul','$isi', '$tanggal','$jenis',,'$tentang','$gambar_baru')");
+        $result = mysqli_query($conn, "INSERT INTO artikel (id, judul , isi, tanggal, jenis ,tentang ,gambar) VALUES ('','$judul','$isi', '$tanggal','$jenis','$tentang','$gambar_baru')");
 
         if ($result){
             echo "
@@ -100,7 +100,7 @@ if (isset($_POST['tambah'])){
         </select>
 
         <label for="gambar">Gambar :</label>
-        <input type="file" id="gambar" name="gambar" accept="image/*" required>
+        <input type="file" id="gambar" name="gambar" required>
 
         <input type="submit" name="tambah" value="Tambah Data">
     </form>
