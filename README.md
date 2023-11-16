@@ -38,7 +38,7 @@ anda dapat login sebagai admin saat memasukan username dan password yang sesuai 
 
 
 ### Dashboard admin
-setelah anda login, anda langsung masuk ke halaman dashboard admin
+setelah anda login, anda langsung masuk ke halaman dashboard admin dan dapat memilih untuk masuk ke artikel barang atau melihat lainnya
 ![dashboard admin](https://github.com/aab-dii/PA_WEB_B1_K1/assets/145459928/1c299079-cdff-40ff-9ec0-0e7ee6bce5ff)
 
 
