@@ -32,10 +32,12 @@ if (isset($_GET['search'])) {
     }
 }
 else {
-    $tampil = mysqli_query($conn, "SELECT * FROM artikel");
+    $tampil1 = mysqli_query($conn, "SELECT * FROM artikel where tentang = 'Toko'");
+    $tampil2 = mysqli_query($conn, "SELECT * FROM artikel where tentang = 'Global'");
 }
 
-$art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
+$artt = mysqli_fetch_all($tampil1, MYSQLI_ASSOC);
+$artg = mysqli_fetch_all($tampil2, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +61,7 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
         </div>
 
         <div class="profile">
-        <a class="profile-btn" href=""><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
+            <a class="profile-btn" href=""><img src="../img/profile.png" alt=""> <h4><?php echo $_SESSION['username'] ?></h4></a>
         </div>
     </nav>
     
@@ -80,39 +82,35 @@ $art = mysqli_fetch_all($tampil, MYSQLI_ASSOC);
             
             <div class="article-container">
                 <h1>Berita Tentang Kami</h1>
-            <?php foreach ($art as $result) : ?>
+            <?php foreach ($artt as $resultt) : ?>
                 <div class="article">
-                <?php if ($result['tentang'] == "Toko") : ?>
-                    <a href="artikel.php?id=<?php echo $result['id']; ?> "class="artikela">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
+                    <a href="artikel.php?id=<?php echo $resultt['id']; ?> "class="artikela">
+                        <img src="../assets/artikel/<?php echo $resultt['gambar']; ?>" alt="<?php echo $resultt['judul']; ?>">
                         <div class="article-content">
-                            <h2><?php echo substr($result['judul'], 0, 50) . "..."; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 50) . "..."; ?></p>
+                            <h2><?php echo $resultt['judul']; ?></h2>
+                            <p class="date"><?php echo $resultt['tanggal']; ?></p>
+                            <p class="isi"><?php echo substr($resultt["isi"], 0, 100) . "..."; ?></p>
                         </div>
                     </a>
                 </div>
-                <?php endif; ?>
                 <?php endforeach; ?>
             </div>
             <div class="sidebarr right-sidebar">
-                <?php if ($result['tentang'] == "Global") : ?>
                 <h3>Berita Seputar Handphone</h3>
-                    <?php foreach ($art as $result) : ?>
-                <a href="artikel.php?id=<?php echo $result['id']; ?> " class="right-article">
+                <?php foreach ($artg as $resultg) : ?>
+                    <a href="artikel.php?id=<?php echo $resultg['id']; ?> " class="right-article">
                     <div class="article">
-                        <img src="../assets/artikel/<?php echo $result['gambar']; ?>" alt="<?php echo $result['judul']; ?>">
+                        <img src="../assets/artikel/<?php echo $resultg['gambar']; ?>" alt="<?php echo $resultg['judul']; ?>">
                         <div class="article-content">
-                            <h2><?php echo substr($result['judul'], 0, 50) . "..."; ?></h2>
-                            <p class="date"><?php echo $result['tanggal']; ?></p>
-                            <p class="isi"><?php echo substr($result["isi"], 0, 25) . "..."; ?></p>
+                            <h2><?php echo $resultg['judul']; ?></h2>
+                            <p class="date"><?php echo $resultg['tanggal']; ?></p>
+                            <p class="isi"><?php echo substr($resultg["isi"], 0, 50) . "..."; ?></p>
                         </div>
                     </div>
                 </a>
+                <?php endforeach; ?>
                 <!-- Tambahkan artikel lainnya sesuai kebutuhan -->
             </div>
-            <?php endforeach; ?>
-            <?php endif; ?>
         </div>
     </section>
     <footer>

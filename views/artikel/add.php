@@ -85,7 +85,7 @@ if (isset($_POST['tambah'])){
         <input type="text" id="judul" name="judul" required autocompleted="off">
 
         <label for="isi">Isi :</label>
-        <input type="text" id="isi" name="isi" required>
+        <textarea id="deskripsi" name="isi" required></textarea>
 
         <label for="tanggal">Tanggal :</label>
         <input type="text" id="tanggal" name="tanggal" required>

@@ -67,7 +67,7 @@ if (isset($_POST['update'])){
             <input type="text" id="judul" name="judul" value="<?php echo $art['judul']?>" required>
 
             <label for="isi">Isi :</label>
-            <input type="text" id="isi" name="isi" value="<?php echo substr($art['isi'], 0, 100) . "..." ?>" required>
+            <textarea id="deskripsi" name="isi" value="<?php echo $art['isi']?>" required></textarea>
 
             <label for="tanggal">Tanggal :</label>
             <input type="text" id="tanggal" name="tanggal" value="<?php echo $art['tanggal']?>" required>

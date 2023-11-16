@@ -162,6 +162,7 @@ section h2{
 }
 
 .content {
+    display: flex;
     flex: 1;
     padding: 10px;
 }
